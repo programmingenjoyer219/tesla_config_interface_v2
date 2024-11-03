@@ -16,7 +16,7 @@
 			bind:checked={selectedAddonsStore.performanceUpgrade}
 		/>
 		<p class="text-sm min-[425px]:text-base">
-			Add Full Self-Driving for ${PERFORMANCE_PACKAGE_RATE}
+			Add Performance Upgrade for ${PERFORMANCE_PACKAGE_RATE}
 		</p>
 	</div>
 </div>
