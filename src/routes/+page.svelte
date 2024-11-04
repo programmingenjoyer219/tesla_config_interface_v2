@@ -16,9 +16,7 @@
 		<!-- left column : images -->
 		<div class="relative">
 			<div class="flex flex-col items-stretch sticky top-4">
-				<!-- exterior -->
 				<Exterior />
-				<!-- interior -->
 				<Interior />
 			</div>
 		</div>
@@ -30,23 +28,15 @@
 					Customize Your Car
 				</p>
 			</div>
-			<!-- car color -->
 			<ExteriorColor />
-			<!-- interior color -->
 			<InteriorColor />
-			<!-- wheel type -->
 			<PerformanceWheels />
-			<!-- full self driving -->
 			<FullSelfDriving />
-			<!-- performance package -->
 			<PerformancePackage />
-			<!-- accessories -->
 			<Accessories />
-			<!-- net price -->
 			<NetPrice />
 			<!-- division line -->
 			<div class="w-full h-1 bg-gray-200 mb-6"></div>
-			<!-- payment breakdown -->
 			<PaymentBreakdown />
 		</div>
 	</div>
