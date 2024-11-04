@@ -8,16 +8,18 @@
 	let { name, selected = $bindable(false), rate }: Props = $props();
 </script>
 
-<div class="accessory p-4 rounded-md ring-2 ring-gray-400/75 shadow-md">
+{#snippet field(content: string)}
 	<div class="flex items-center justify-start">
-		<span class="text-sm min-[425px]:text-base">{name}</span>
+		<span class="text-sm min-[425px]:text-base">{content}</span>
 	</div>
+{/snippet}
+
+<div class="accessory p-4 rounded-md ring-2 ring-gray-400/75 shadow-md">
+	{@render field(name)}
 	<div class="flex items-center justify-start">
 		<input type="checkbox" class="custom-checkbox" bind:checked={selected} />
 	</div>
-	<div class="flex items-center justify-start">
-		<span class="text-sm min-[425px]:text-base">${rate}</span>
-	</div>
+	{@render field("$" + rate)}
 </div>
 
 <style>
