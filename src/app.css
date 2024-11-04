@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-checkbox {
+	@apply cursor-pointer size-6 appearance-none checked:bg-blue-500/60 border-2 border-slate-500 rounded-sm;
+}
+
+.custom-radio-button {
+	@apply cursor-pointer size-6 appearance-none checked:bg-blue-500/60 border-2 border-slate-500 rounded-full;
+}

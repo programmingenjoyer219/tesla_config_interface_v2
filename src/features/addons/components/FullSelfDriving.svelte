@@ -12,7 +12,7 @@
 			type="checkbox"
 			name="full-self-driving"
 			id="full-self-driving"
-			class="cursor-pointer size-6 appearance-none checked:bg-blue-500/60 border-2 border-slate-500 rounded-sm"
+			class="custom-checkbox"
 			bind:checked={selectedAddonsStore.fullSelfDriving}
 		/>
 		<p class="text-sm min-[425px]:text-base">

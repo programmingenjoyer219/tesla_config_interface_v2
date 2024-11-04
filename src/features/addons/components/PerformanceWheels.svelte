@@ -18,7 +18,7 @@
 					type="radio"
 					value={wheelType === "performance"}
 					bind:group={selectedAddonsStore.performanceWheels}
-					class="cursor-pointer size-6 appearance-none checked:bg-blue-500/60 border-2 border-slate-500 rounded-full"
+					class="custom-radio-button"
 				/>
 				{#if wheelType === "standard"}
 					<span class="font-medium text-sm min-[425px]:text-base">Standard</span

@@ -13,11 +13,7 @@
 		<span class="text-sm min-[425px]:text-base">{name}</span>
 	</div>
 	<div class="flex items-center justify-start">
-		<input
-			type="checkbox"
-			class="cursor-pointer size-6 appearance-none checked:bg-blue-500/60 border-2 border-slate-500 rounded-sm"
-			bind:checked={selected}
-		/>
+		<input type="checkbox" class="custom-checkbox" bind:checked={selected} />
 	</div>
 	<div class="flex items-center justify-start">
 		<span class="text-sm min-[425px]:text-base">${rate}</span>
