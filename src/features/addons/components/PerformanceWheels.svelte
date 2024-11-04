@@ -3,7 +3,6 @@
 	import { selectedAddonsStore } from "../stores/selectedAddons.svelte";
 
 	const wheelTypes = ["standard", "performance"];
-	// TODO :: Use static components instead of using '#each' block
 </script>
 
 <div class="mb-6 space-y-3">
@@ -11,8 +10,8 @@
 	<div class="grid grid-rows-2 gap-2">
 		{#each wheelTypes as wheelType}
 			<div
-				class="flex items-center gap-2 p-4 rounded-md ring-2 ring-gray-400/75 shadow-md {wheelType ===
-					'performance' && 'bg-gray-300/50'}"
+				class="flex items-center gap-2 p-4 rounded-md ring-2 ring-gray-400/75 shadow-md
+				{wheelType === 'performance' && 'bg-gray-300/50'}"
 			>
 				<input
 					type="radio"
@@ -20,14 +19,11 @@
 					bind:group={selectedAddonsStore.performanceWheels}
 					class="custom-radio-button"
 				/>
-				{#if wheelType === "standard"}
-					<span class="font-medium text-sm min-[425px]:text-base">Standard</span
-					>
-				{:else}
-					<span class="font-medium text-sm min-[425px]:text-base"
-						>Performance (+{WHEEL_TYPE_RATE.toLocaleString()})</span
-					>
-				{/if}
+				<span class="font-medium text-sm min-[425px]:text-base">
+					{wheelType === "standard"
+						? "Standard"
+						: `Performance (+${WHEEL_TYPE_RATE.toLocaleString()})`}
+				</span>
 			</div>
 		{/each}
 	</div>
